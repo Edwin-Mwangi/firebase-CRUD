@@ -1,6 +1,11 @@
+// import { getFirestore, collection, query, where, getDocs } from "firebase/firestore";
+
+const { getFirestore, collection, query, where, getDocs } = require('firebase/firestore')
+
 const firebase = require('../db')
 const Assembly = require('../models/inventory')
-const firestore = firebase.firestore();
+// const firestore = firebase.firestore();
+const firestore = getFirestore(firebase)
 
 //add assembly line
 const addAssembly = async(req, res, next) => {
